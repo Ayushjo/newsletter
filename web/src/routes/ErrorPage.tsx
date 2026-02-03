@@ -1,5 +1,4 @@
 import { useRouteError, isRouteErrorResponse, Link } from "react-router-dom";
-import './ErrorPage.css';
 
 const ErrorPage = () => {
   const error = useRouteError();
@@ -24,14 +23,14 @@ const ErrorPage = () => {
   }
 
   return (
-    <div className="error-page-container">
-      <div className="error-content">
-        <h1 className="error-title">{errorTitle}</h1>
-        <p className="error-subtitle">Unexpected Error Occurred</p>
-        <p className="error-message">
+    <div className="flex flex-col justify-center items-center min-h-screen p-6 sm:p-8 bg-gray-50 text-gray-800 font-sans text-center">
+      <div className="max-w-lg w-full">
+        <h1 className="text-5xl sm:text-7xl font-black mb-4 text-gray-900">{errorTitle}</h1>
+        <p className="text-xl sm:text-2xl font-semibold mb-4 text-gray-700">Unexpected Error Occurred</p>
+        <p className="text-base sm:text-lg text-gray-500 mb-8 leading-relaxed">
           <i>{errorMessage}</i>
         </p>
-        <Link to="/" className="error-home-link">
+        <Link to="/" className="inline-block px-6 py-3.5 text-base font-semibold text-white bg-indigo-600 rounded-lg border-none no-underline transition-all duration-200 hover:bg-indigo-700 active:scale-95 shadow-lg shadow-indigo-600/20">
           Go Initial Page
         </Link>
       </div>
