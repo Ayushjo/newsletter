@@ -7,10 +7,12 @@ export const signUpHandler = async (req: Request, res: Response) => {
     const { email } = req.body;
     
     if (!email) {
-      throw new Error("Email is required");
+      return res.status(400).json({ success: false, message: "Email is required" });
     }
     if (!isEmailValid(email)) {
-      throw new Error("Please enter a valid email address");
+      return res
+        .status(400)
+        .json({ success: false, message: "Email is not valid" });
     }
 
     const newsLetterSubscriber = await upsertSubscriber(email)
