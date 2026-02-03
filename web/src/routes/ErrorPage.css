@@ -1,0 +1,80 @@
+/* Error Page Container */
+.error-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1.5rem; /* Reduced padding for mobile */
+  background-color: #f9fafb;
+  color: #1f2937;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.error-content {
+  max-width: 500px;
+  width: 100%;
+}
+
+.error-title {
+  font-size: 2.5rem; /* Smaller base size for mobile */
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.error-subtitle {
+  font-size: 1.25rem; /* Smaller for mobile */
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.error-message {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Back Home Button */
+.error-home-link {
+  display: inline-block;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #4f46e5;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.error-home-link:hover {
+  background-color: #4338ca;
+}
+
+.error-home-link:active {
+  transform: scale(0.98);
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 640px) {
+  .error-page-container {
+    padding: 2rem;
+  }
+
+  .error-title {
+    font-size: 4rem; /* Specific request size or just larger */
+  }
+
+  .error-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .error-message {
+    font-size: 1.125rem;
+  }
+}
