@@ -6,6 +6,7 @@ import SignUpPage from "./routes/NewsLetterSignUpPage.tsx"
 
 import ErrorPage from "./routes/ErrorPage.tsx";
 import ConfirmEmailSentPage from "./routes/ConfirmEmailSentPage.tsx";
+import ConfirmationPage from "./routes/ConfirmationPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/confirm-email-sent",
     element: <ConfirmEmailSentPage />
+  },
+  {
+    path: "/confirm",
+    element: <ConfirmationPage />
   }
 ])
 
