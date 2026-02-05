@@ -2,7 +2,7 @@ import express from "express"
 import { signUpHandler } from "./signup"
 import { sendConfirmEmail } from "./send-confirm-email"
 import { confirmEmail } from "./confirm-email"
-import { sendWelcomeEmail } from "../../services/mailer/resend"
+import { sendWelcomeMessage } from "./send-welcome-email"
 
 
 export const createNewsLetterRouter = ()=>{
@@ -10,6 +10,6 @@ export const createNewsLetterRouter = ()=>{
     newsLetterRouter.post("/newsletter/signup",signUpHandler)
     newsLetterRouter.post("/newsletter/send-confirm-email",sendConfirmEmail)
     newsLetterRouter.post("/newsletter/confirm-email",confirmEmail)
-    newsLetterRouter.post("/newsletter/welcome",sendWelcomeEmail)
+    newsLetterRouter.post("/newsletter/welcome",sendWelcomeMessage)
     return newsLetterRouter
 }

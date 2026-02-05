@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import {  sendWelcomeEmail } from "../../services/mailer/resend";
 
-export const sendConfirmEmail = async (req: Request, res: Response) => {
+export const sendWelcomeMessage = async (req: Request, res: Response) => {
   try {
     console.log(
       "🚀 ~ file: send-confirm-email.ts:6 ~ sendConfirmEmail ~ req.body:"
