@@ -27,3 +27,29 @@ export const upsertSubscriber = async(email: string) => {
         
     }
 }
+
+export const verifySubscriber = async(token:any,email:any) => {
+    try {
+        const subscriber = await client.newsLetterSubscriber.update({
+            where: {
+                email,
+                token:token
+            },
+            data: {
+                confirmed: true,
+                active: true,
+                token:""
+            }
+        })
+        if(!subscriber){
+            throw new Error("Subscriber not found");
+        }
+
+        return subscriber
+        
+    } catch (error:any) {
+        console.log(error);
+        throw new Error(error.message);
+        
+    }
+}
